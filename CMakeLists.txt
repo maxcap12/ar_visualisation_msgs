@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(situational_graphs_msgs)
+project(ar_visualisation_msgs)
 
 # Default to C99
 if(NOT CMAKE_C_STANDARD)
@@ -25,22 +25,9 @@ find_package(sensor_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/PointClouds.msg"
   "msg/MeshData.msg"
   "msg/MeshesData.msg"
-  "msg/PlaneData.msg"
-  "msg/PlanesData.msg"
-  "msg/RoomData.msg"
-  "msg/RoomsData.msg"
-  "msg/FloorCoeffs.msg"
-  "msg/FloorData.msg"
-  "msg/ScanMatchingStatus.msg"
-  "msg/WallData.msg"
-  "msg/WallsData.msg"
-  "srv/DumpGraph.srv"
-  "srv/SaveMap.srv"
-  "srv/LoadGraph.srv"
-  DEPENDENCIES builtin_interfaces rosidl_default_generators std_msgs geometry_msgs sensor_msgs visualization_msgs
+  DEPENDENCIES builtin_interfaces rosidl_default_generators std_msgs geometry_msgs
 )
 
 ament_export_dependencies(rosidl_default_runtime)
