@@ -26,7 +26,6 @@ find_package(visualization_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/MeshData.msg"
-  "msg/MeshesData.msg"
   "msg/MarkerData.msg"
   DEPENDENCIES builtin_interfaces rosidl_default_generators std_msgs geometry_msgs
 )
